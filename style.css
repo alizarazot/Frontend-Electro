@@ -1,4 +1,18 @@
 :root {
+  /* Catppuccin Latte: <https://catppuccin.com/palette> */
+  --color-mantle: hsl(220deg 22% 92%);
+  --color-base: hsl(220deg 23% 95%);
+  --color-surface0: hsl(223deg 16% 83%);
+  --color-text: hsl(234deg 16% 35%);
+  --color-teal: hsl(183deg 74% 35%);
+
+  /* Shades. */
+  --filter-hover: brightness(85%);
+  --filter-click: brightness(77%);
+
+  /* Units. */
+  --s1: 7px;
+  --s2: calc(var(--s1) * 2);
 }
 
 *,
@@ -15,12 +29,16 @@ body {
 
   height: 100dvh;
   margin: 0;
+
+  color: var(--color-text);
+
+  background-color: var(--color-base);
 }
 
 .Nav {
   display: flex;
   flex-direction: column;
-  outline: 3px solid orange;
+  background-color: var(--color-mantle);
 }
 
 .Nav ul {
@@ -33,28 +51,40 @@ body {
 }
 
 .Nav li {
-  flex-grow: 1;
+  cursor: pointer;
+  padding: var(--s1);
   list-style: none;
-  outline: 3px solid purple;
+  background-color: var(--color-mantle);
 }
 
-.Nav .Camera {
+.Nav li:hover {
+  filter: var(--filter-hover);
+}
+
+.Nav li:active {
+  filter: var(--filter-click);
+}
+
+.Nav .Spacing {
   flex-grow: 2;
 }
 
 .Header h1 {
   margin: 0;
+  padding: var(--s2);
   text-align: center;
-  outline: 3px solid red;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  outline: 3px solid cyan;
+  gap: var(--s2);
+
+  margin: var(--s2);
 }
 
 .Parking {
-  outline: 3px solid green;
+  background-color: var(--color-surface0);
+  border-radius: var(--s1);
 }
