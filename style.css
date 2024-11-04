@@ -69,6 +69,10 @@ body {
   flex-grow: 2;
 }
 
+.Nav img {
+  width: 100%;
+}
+
 .Header h1 {
   margin: 0;
   padding: var(--s2);
@@ -87,4 +91,8 @@ main {
 .Parking {
   background-color: var(--color-surface0);
   border-radius: var(--s1);
+}
+
+.Parking img {
+  width: 100%;
 }
