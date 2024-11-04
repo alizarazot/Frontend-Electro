@@ -17,12 +17,39 @@ body {
 }
 
 .Nav {
+   display: flex;
+   flex-direction: column;
+
    outline: 3px solid orange;
+}
+
+.Nav ul {
+   padding: 0;
+   margin: 0;
+   flex-grow: 1;
+
+   display: flex;
+   flex-direction: column;
 }
 
 .Nav li {
    list-style: none;
+   flex-grow: 1;
+
+   outline: 3px solid purple;
 }
+
+.Nav .Camera {
+   flex-grow: 2;
+}
+
+.Header h1 {
+   text-align: center;
+   margin: 0;
+
+   outline: 3px solid red;
+}
+
 
 main {
    display: grid;
