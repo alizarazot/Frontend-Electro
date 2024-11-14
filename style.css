@@ -65,9 +65,13 @@ body {
 
 .Nav li {
   cursor: pointer;
-  padding: var(--s1);
+  padding: var(--s2);
   list-style: none;
   background-color: var(--color-mantle);
+}
+
+.Nav h2 {
+  font-size: var(--text2);
 }
 
 .Nav li:hover {
@@ -106,19 +110,21 @@ main {
 
 .Parking {
   overflow-y: auto;
-  padding: var(--s1);
+  padding: var(--s2);
   background-color: var(--color-surface0);
   border-radius: var(--s1);
 }
 
-.Parking h2 {
+.Parking h3 {
   margin: 0;
-  padding: var(--s1);
-  font-size: var(--text2);
+  padding: var(--s2);
+  padding-top: 0;
+
+  font-size: var(--text3);
   text-align: center;
 }
 
-.Parking img {
+.Camera {
   display: block;
   width: 100%;
   border-radius: var(--s1);
