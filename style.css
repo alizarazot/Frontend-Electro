@@ -11,8 +11,18 @@
   --filter-click: brightness(77%);
 
   /* Units. */
-  --s1: 7px;
+  --s1: 8px;
   --s2: calc(var(--s1) * 2);
+  --text: 2.2rem;
+  --text1: calc(var(--text2) + var(--text-increment));
+  --text2: calc(var(--text3) + var(--text-increment));
+  --text3: calc(var(--text4) + var(--text-increment));
+  --text4: calc(var(--text5) + var(--text-increment));
+  --text5: calc(var(--text6) + var(--text-increment));
+  --text6: calc(var(--text) + var(--text-increment));
+  --text-increment: 0.2rem;
+
+  font-size: 62.5%;
 }
 
 *,
@@ -30,6 +40,7 @@ body {
   height: 100dvh;
   margin: 0;
 
+  font-size: var(--text);
   color: var(--color-text);
 
   background-color: var(--color-base);
@@ -76,8 +87,11 @@ body {
 .Header h1 {
   margin: 0;
   padding: var(--s2);
+  font-size: var(--text1);
   text-align: center;
 }
+
+/* || Camera section. */
 
 main {
   display: grid;
@@ -89,10 +103,20 @@ main {
 }
 
 .Parking {
+  padding: var(--s1);
   background-color: var(--color-surface0);
   border-radius: var(--s1);
 }
 
+.Parking h2 {
+  margin: 0;
+  padding: var(--s1);
+  font-size: var(--text2);
+  text-align: center;
+}
+
 .Parking img {
+  display: block;
   width: 100%;
+  border-radius: var(--s1);
 }
